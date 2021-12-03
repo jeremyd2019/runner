@@ -136,10 +136,10 @@ if [[ "$PACKAGERUNTIME" == "win-x64" || "$PACKAGERUNTIME" == "win-x86" ]]; then
 fi
 
 if [[ "$PACKAGERUNTIME" == "win-arm64" ]]; then
-    acquireExternalTool "$NODE_UNOFFICIAL_URL/v${NODE12_VERSION}/$PACKAGERUNTIME/node.exe" node12/bin
-    acquireExternalTool "$NODE_UNOFFICIAL_URL/v${NODE12_VERSION}/$PACKAGERUNTIME/node.lib" node12/bin
-    acquireExternalTool "$NODE_UNOFFICIAL_URL/v${NODE16_VERSION}/$PACKAGERUNTIME/node.exe" node16/bin
-    acquireExternalTool "$NODE_UNOFFICIAL_URL/v${NODE16_VERSION}/$PACKAGERUNTIME/node.lib" node16/bin
+    acquireExternalTool "$NODE_UNOFFICIAL_URL/v12.15.0/$PACKAGERUNTIME/node.exe" node12/bin
+    acquireExternalTool "$NODE_UNOFFICIAL_URL/v12.15.0/$PACKAGERUNTIME/node.lib" node12/bin
+    acquireExternalTool "https://github.com/dennisameling/node/releases/download/v${NODE16_VERSION}-arm64/node.exe" node16/bin
+    acquireExternalTool "https://github.com/dennisameling/node/releases/download/v${NODE16_VERSION}-arm64/node.lib" node16/bin
     if [[ "$PRECACHE" != "" ]]; then
         acquireExternalTool "https://github.com/microsoft/vswhere/releases/download/2.6.7/vswhere.exe" vswhere
     fi
